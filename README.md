@@ -29,13 +29,13 @@
 4. [xHTML语法规范-复习：i](https://echo002.github.io/HTML/01HTML%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/demo04/demo04.html)
 #####
 	见网页
-5. [内联框架-复习：i](https://echo002.github.io/HTML/01HTML%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/demo01/demo01.html)
+5. [内联框架-复习：i](https://echo002.github.io/HTML/01HTML%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/demo05/demo05.html)
 #####	
 	1、使用内联框架可以引入一个外部的页面（iframe）
 		src:指向外部页面
 		现实中不推荐 内联框架的内容不会被搜索引擎和检索
 		参数：width、height、name
-6. [超链接-复习：i](https://echo002.github.io/HTML/01HTML%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/demo01/demo01.html)
+6. [超链接-复习：i](https://echo002.github.io/HTML/01HTML%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/demo06/demo06.html)
 #####
 	1、使用a标签来创建一个超链接
 		href:指向链接跳转的目标地址，也可以写一个相对路径
