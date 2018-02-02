@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	
+	
+</head>
+<body>
+	<!--
+		块和内联元素
+		
+		div就是一个块元素，独占一行,无论他的内容有多少
+		除此之外，还有p、h1、h2...
+		div标签没有任何语义，就是一个纯粹的块元素，而且不会为它里面的元素设置任何样式
+		div标签主要是用来进行页面布局
+		
+		span是一个内联元素（行内元素），只占用自身大小，不会占用一行，一行容不下时自动换行
+		除此之外还有a、img
+		div标签没有任何语义，用来选中文字为其设置样式
+		
+		!!!块元素用来设置布局，内联元素用来选中文本设置样式!!!
+		一般情况下使用块包含内联元素
+		a可以包含任意元素，除了它本身
+		p元素不可以包含其他的块元素
+	-->
+	<div style="background-color: red; width: 100px;">
+		这是一个div
+	</div>
+	
+	<div style="background-color: green; width: 150px;">
+		这是一个div
+	</div>
+	
+	<hr />
+	<span style="color: gray;">这是一个span</span>
+	<span>这是一个span</span>
+	
+</body>
+</html>

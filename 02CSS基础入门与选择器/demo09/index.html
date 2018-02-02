@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>子元素选择器</title>
+		
+		<style>
+			/*
+		 	* 为第一个、最后一个p标签设置背景颜色
+		 	*/
+			p:first-child{
+				background-color: aqua;
+			}
+			p:last-child{
+				background-color: blue;
+			}
+			p:nth-child(3){
+				/*选择指定位置的元素，可指定参数（even偶数、odd奇数）*/
+				color: chocolate;
+			}
+			/*
+			 * first-child等是判断是不是父元素的第一个元素
+			 * frist-of-type则是判断是不是父元素的第一类元素
+			 * last-of-type、nth-of-type
+			 */
+		</style>
+	</head>
+	<body>
+		<p>我是一个p标签</p>
+		<p>我是一个p标签</p>
+		<p>我是一个p标签</p>
+		<p>我是一个p标签</p>
+		<p>我是一个p标签</p>
+		<div><p>我是一个p标签</p></div>
+		
+	</body>
+</html>

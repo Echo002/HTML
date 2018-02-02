@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>伪元素</title>
+		<style type="text/css">
+		/*
+		 * 使用伪元素来表示元素中的一些特殊位置
+		 * p:frist-latter
+		 * 第一个字符
+		 * p:frist-line
+		 * 第一行
+		 * p:before
+		 * 段落前
+		 * p:after
+		 * 段落后
+		 */
+		p:first-letter{
+			color:red;
+			font-size:20px;
+		}
+		p:before{
+			content: "我会出现在标签的最前端";
+		}
+		</style>
+	</head>
+	<body>
+		<p>这是一个段落</p>
+	</body>
+</html>

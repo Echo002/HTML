@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>兄弟选择器、否定伪类</title>
+		<style type="text/css">
+			/*
+			 * 兄弟选择器：
+			 * 为span后的一个p标签设置样式
+			 * +：后一个兄弟设置样式
+			 * ~：为后边所有兄弟设置样式
+			 * */
+			span+p{
+				background-color: blueviolet;
+			}
+			/*
+			 * 伪类选择器：
+			 * 为除了hello元素的所有p标签设置样式
+			 * 从选中的元素中排除一些特定的元素
+			 * 语法：not(选择器)
+			 */
+			p:not(.hello){
+				color: cornflowerblue;
+			}
+		</style>
+	</head>
+	<body>
+		<p>我是一个p标签</p>
+		<p>我是一个p标签</p>
+		<p class="hello">我是一个p标签</p>
+		<span>我是一个span</span>
+		<p>我是一个p标签</p>
+		<p>我是一个p标签</p>
+	</body>
+</html>

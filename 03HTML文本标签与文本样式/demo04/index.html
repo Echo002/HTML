@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>行高</title>
+		<style type="text/css">
+			/*
+			 * CSS中并没有直接设置行间距的方式
+			 * 我们只能通过设置行高来间接设置行间距，行高越大行间距越大
+			 * 使用line-height来设置行高,文字默认在行高居中显示
+			 * 行间距  = 行高 - 字体大小
+			 * line-height可以接受的值：
+			 * 1、直接接受一个像素值
+			 * 2、以字体大小来计算的百分数
+			 * 3、一字体大小为倍数的数值
+			 */
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: #bfa;
+				line-height: 200px;
+				/*
+				 * 小TIPS：
+				 * 1、对于单行文本来说，可以将行高设置成父元素的高度
+				 * 	这样可以是单行文本在父元素垂直居中
+				 * 2、在font属性中，参数写成 npx/mpx 表示 字体/行高，不指定会使用默认值
+				 */
+			}
+			.p1{
+				font-size: 20px;
+				line-height: 40px;
+			}
+			.p2{
+				/*
+				 * text-transform可以用来设置文本的大小写
+				 * 参数：
+				 * none 默认值
+				 * capitalize 首字母大写 单词通过空格来判断
+				 * uppercase 全部大写
+				 * lowercase 全部小写
+				 * 
+				 * text-decoration可以用来设置文本划线
+				 * 参数：
+				 * underline 下划线
+				 * overline 上划线
+				 * line-through 删除线
+				 * blink 闪烁文本
+				 */
+				text-transform: uppercase;
+				text-decoration: line-through;
+			}
+			a{
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<a href="#">我是一个超链接</a>
+		</div>
+		<p class="p1">
+			罗斯·金的《米开朗琪罗与教皇的天花板》，有点像是文艺复兴时期艺术界略带八卦的人物小传。 它写历史，但对涉及的战争、宗教、政治仅浅尝辄止，只取其中和笔下人物命运走向相连的一二点，巧妙地绕开了历史纷繁复杂的细节；它写传记，但只选择一人一生中最值得书写的片段详谈，灵活地将他所做的事，相关的人，编制进这片漫长黑暗之后的清醒时代。
+		</p>
+		<p class="p2">
+			Life is full of confusing and disordering Particular time,a particular location,Do the arranged thing of ten million time in the brain,Step by step ,the life is hard to avoid delicacy and stiffness No enthusiasm forever,No unexpected happening of surprising and pleasing So,only silently ask myself in mind Next happiness,when will come?
+		</p>
+		<a href="#">我是超链接</a>
+		<!--
+			超链接会默认加一条下划线 text-decoration设置为underline
+		-->
+		<p class="p3">我是字符串</p> 
+</body>
+</html>

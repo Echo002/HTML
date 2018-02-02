@@ -1,0 +1,47 @@
+<!DCOTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>CSS</title>
+</head>
+	<!--
+	内部样式表
+	也可以将CSS样式写在head中的style标签里
+	将样式表编写的style标签中，然后通过CSS选择器中指定元素
+	然后可以同时为这些元素一起设置样式，这样可以使样式进一步地复用
+	将样式表编写的style标签中，也可是使表现和结构进一步分离 推荐使用
+	
+	<style tyle="text/css">
+	p{
+		color:red;
+		font-size:40px;
+	}
+	</style>
+	-->
+	
+	<link rel="stylesheet" type="text/css" href="demo01.css">
+
+<body>
+	<!--
+	可以将CSS样式编写到元素的style属性当中 称为内联样式
+	只对当前的元素内容起作用 不推荐使用
+	<p style="color:red;font-size=40px">内联样式的标签</p>
+	-->
+	
+	<p>这是标签1</p>
+	<p>这是标签2</p>
+	<p>这是标签3</p>
+	<p style="color:blue;font-size=40px">这是标签4</p>
+
+</body>
+
+
+
+</html>
+
+<!--
+还可以将style写到外部的CSS文件中
+通过link标签来引用
+参见demo01.css
+-->

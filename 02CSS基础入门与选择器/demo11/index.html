@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>样式的继承、优先级</title>
+		<style type="text/css">
+			p{
+				background-color: yellow;
+			}
+			.p1{
+				background-color: yellowgreen;
+			}
+			#p2{
+				background-color: red;
+			}
+			/*
+			 * 选择器的优先级：
+			 * 内联样式1000
+			 * id选择器100
+			 * 类和伪类10
+			 * 元素选择器1
+			 * 通配(*)选择器0
+			 * 继承没有优先级
+			 * 选择器相加时 优先级相加，但是选择器的计算不会超过最大数量级，优先级相同看靠后的
+			 * 并集选择器的优先级单独计算，使用!important将优先级提到最高，在开发中避免使用
+			 */
+		</style>
+	</head>
+	<body>
+		<!--
+        	祖先元素的样式也可以被后代继承
+        -->
+        <p style="font-size: 20px;">
+        	我是p标签
+        	<span>我是p标签中的span</span>
+        	<!--
+        		p中的span也继承了，利用继承，简化操作
+        		背景类的设置除外
+        	-->
+        </p>
+        <span>我是p标签外的span</span>
+        <p class="p1" id="p2" style="background-color: skyblue;">优先级</p>
+	</body>
+</html>

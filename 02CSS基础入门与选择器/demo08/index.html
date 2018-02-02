@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>属性选择器</title>
+		<style type="text/css">
+			/*
+			 * 为所有具有title的元素指定背景颜色
+			 * 属性选择器
+			 * 作用：根据元素中的属性或属性值来选取指定元素
+			 * 语法：[属性值]、[属性值=属性名]
+			 */
+			p[title]{
+				background-color: red;
+			}
+			p[title="abc"]{
+				background-color: yellow;
+			}
+			p[title^="this is"]{
+				background-color: green;
+				/*
+				 * ^表示以...开头
+				 * $表示以...结尾
+				 * *表示含有
+				 */
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			title属性：这个属性可以为任何元素指定
+			当鼠标移入到该元素时可以看见效果
+		-->
+		<p title="this">标签</p>
+		<p title="this is">标签</p>
+		<p title="abc">标签</p>
+		<p>标签</p>
+		<p title="this is a">标签</p>
+		<p title="this is a title">标签</p>
+	</body>
+</html>
