@@ -45,12 +45,45 @@
 				 * overline 上划线
 				 * line-through 删除线
 				 * blink 闪烁文本
+				 * 
+				 * 
 				 */
 				text-transform: uppercase;
 				text-decoration: line-through;
 			}
 			a{
 				text-decoration: none;
+			}
+			.p3{
+				/*
+				 * letter-spacing可以指定字符间距
+				 * 默认值为0 中英文都有效
+				 * 
+				 * word-spacing可以用来指定单词之间的间距，以空格判断单词
+				 * 对中文意义不大
+				 */
+				letter-spacing: 10px;
+			}
+			
+			.p4{
+				/*
+				 * text-indent用于设置首行缩进
+				 * 指定正值右移动，指定负值左移动
+				 * 一般使用em做单位
+				 * 使用负值，用于让收索引擎看见而用户看不见的信息
+				 */
+				text-indent: 20px;
+			}
+			.p5{
+				/*
+				 * text-align用于文本对齐
+				 * 参数：
+				 * left：默认左对齐
+				 * right：右边
+				 * center：居中
+				 * justify:两端对齐
+				 */
+				text-align: center;
 			}
 		</style>
 	</head>
@@ -69,5 +102,11 @@
 			超链接会默认加一条下划线 text-decoration设置为underline
 		-->
 		<p class="p3">我是字符串</p> 
+		<p class="p4">
+			罗斯·金的《米开朗琪罗与教皇的天花板》，有点像是文艺复兴时期艺术界略带八卦的人物小传。 它写历史，但对涉及的战争、宗教、政治仅浅尝辄止，只取其中和笔下人物命运走向相连的一二点，巧妙地绕开了历史纷繁复杂的细节；它写传记，但只选择一人一生中最值得书写的片段详谈，灵活地将他所做的事，相关的人，编制进这片漫长黑暗之后的清醒时代。
+		</p>
+		<p class="p5">
+			Life is full of confusing and disordering Particular time,a particular location,Do the arranged thing of ten million time in the brain,Step by step ,the life is hard to avoid delicacy and stiffness No enthusiasm forever,No unexpected happening of surprising and pleasing So,only silently ask myself in mind Next happiness,when will come?
+		</p>
 </body>
 </html>
