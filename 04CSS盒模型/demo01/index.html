@@ -2,9 +2,58 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+		<title>盒子模型-内边距</title>
+		<style type="text/css">
+			.box1{
+				width: 100px;
+				height: 100px;
+				/*
+				 * 这两个设置的是内容区
+				 * 盒子可见框的大小由内容区、内边距和边框决定
+				 */
+				background-color: aqua;
+				/*
+				 * 为元素指定边框，必须指定三个元素
+				 * border-width(四个边)、border-color、border-style
+				 * border-width也可以设置四边分别宽度(也可以分别设置：border-xxx-width)
+				 * 设置4个值(从上往下顺时针，用空格隔开);
+				 * 设置3个值(上、两侧、下)
+				 * 设置2个值(上下侧、左右侧)
+				 * 后面的属性同样适用
+				 * 详细查看例程
+				 */
+				border-style: solid;
+				border-color: red;
+				border-width: 10px 20px 30px 40px;
+			}
+			.box2{
+				/*
+				 * 也可以使用border同时设置四个边框的三个属性值，无顺序要求
+				 * border-xxx同时设置某个边框的三个属性值(top、right、bottom、left)
+				 */
+				border: green 20px solid;
+				width: 100px;
+				height: 100px;
+				background-color: aqua;
+				/*
+				 * 内边距(padding)指的是指盒子的内容区与边框之间的距离，也是四个方向
+				 * 内边距会影响盒子可见框的大小，元素的背景会延伸到内边距
+				 * 子父元素之间的继承不会影响到内边距
+				 * 可见框的大小=width + padding*2 + border*2
+				 */
+				padding: 10px;
+			}
+			.box3{
+				width: 100%;
+				height: 100%;
+				background-color: black;
+			}
+		</style>
 	</head>
 	<body>
-		
+		<div class="box1"></div>
+		<div class="box2">
+			<div class="box3"></div>
+		</div>
 	</body>
 </html>
