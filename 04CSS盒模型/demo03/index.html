@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>垂直外边距的重叠</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				/*清除浏览器默认样式，但是用*号性能不太好*/
+			}
+			#box1{
+				width: 100px;
+				height: 100px;
+				/*设置一个下外边距*/
+				margin-bottom: 100px;
+				background-color: green;
+			}
+			/*
+			 * 垂直方向的相邻外边距会重叠
+			 * 对于兄弟元素之间来说：取最大值而不是取和
+			 * 对于父子元素之间来说：子元素设置后会影响到父元素
+			 * 使其不重叠的方式：
+			 * 1、使其不相邻
+			 * 2、使其不垂直
+			 */
+			#box2{
+				width: 100px;
+				height: 100px;
+				margin-top: 100px;
+				/*设置一个上外边距*/
+				background-color: red;
+			}
+			#box3{
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				/*两者任意一个均可隔开,实际开发考虑1px*/
+				/*border-top: 1px;*/
+				padding-top: 1px;
+			}
+			#box4{
+				width: 50px;
+				height: 50px;
+				margin-top: 10px;
+				/*设置一个上外边距*/
+				background-color: yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box3">
+			<div id="box4"></div>
+		</div>
+		<div id="box1"></div>
+		<div id="box2"></div>
+		<p>标签</p>
+		<p>标签</p>
+		<p>标签</p>
+		<ul>
+			<li>无序列表</li>
+			<li>无序列表</li>
+			<li>无序列表</li>
+		</ul>
+		<!--
+			浏览器为了在页面没有样式时也能有好的显示效果
+			自带很多默认样式
+			但是我们开发一般自定义，所以开发前要把这些默认设置去掉
+			具体方式看CSS代码区
+		-->
+	</body>
+</html>
