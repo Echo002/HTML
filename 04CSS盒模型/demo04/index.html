@@ -11,9 +11,13 @@
 				/*对内联样式不起作用*/
 				/*width: 100px;
 				height: 100px;*/
-				/*对内联样式起作用，但是不影响布局*/
+				/*内边距对内联样式起作用，水平影响布局垂直不会。边框同理*/
 				padding-left: 100px;
 				padding-right: 100px;
+				border: 1px black solid;
+				/*外边距对内联样式只支持水平方向*/
+				margin-left: 50px;
+				margin-right: 50px;
 			}
 		</style>
 	</head>
