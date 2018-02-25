@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>清除浮动</title>
+		<style type="text/css">
+			.box1{
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				float: left;
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color: yellowgreen;
+				/*
+				 * 由于受到box1的影响，box2整体向上移动了100px
+				 * 有时我们希望清除掉元素浮动后对其他元素位置的影响，可以使用clear完成功能
+				 * clear可以用来清除浮动元素对其他元素的影响
+				 * 参数：
+				 * none：默认值，不清除
+				 * left、right：清除左右元素的影响
+				 * both：清除两侧元素的影响（影响最大）
+				 */
+				/*clear: left;*/
+				float: right;
+			}
+			.box3{
+				width: 300px;
+				height: 300px;
+				background-color: blue;
+				clear: left;
+			/*
+			 * 解决高度塌陷方案二：
+			 * 	可以直接在高度塌陷的父元素的最后，添加一个空白的div，
+			 * 	由于这个div并没有浮动，所以他是可以撑开父元素的高度的，
+			 * 	然后在对其进行清除浮动，这样可以通过这个空白的div来撑开父元素的高度，
+			 * 	基本没有副作用
+			 * 
+			 * 使用这种方式虽然可以解决问题，但是会在页面中添加多余的结构。
+			 */
+			/*通过after伪类，选中box1的后边*/
+			/*
+			 * 可以通过after伪类向元素的最后添加一个空白的块元素，然后对其清除浮动，
+			 * 	这样做和添加一个div的原理一样，可以达到一个相同的效果，
+			 * 	而且不会在页面中添加多余的div，这是我们最推荐使用的方式，几乎没有副作用
+			 */
+			/*.clearfix:after{
+				添加一个内容
+				content: "";
+				转换为一个块元素
+				display: block;
+				清除两侧的浮动
+				clear: both;
+			}
+			*/
+			 /*在IE6中不支持after伪类,
+			 所以在IE6中还需要使用hasLayout来处理
+			.clearfix{
+				zoom:1;
+			}*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+	</body>
+</html>
+
+			
