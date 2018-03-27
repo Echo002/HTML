@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>定位</title>
+		<style type="text/css">
+			/*定位指的就是将指定元素摆放到页面的任意位置，通过position属性来设置元素的定位*/
+			.box1{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				/*
+				 * 绝对定位
+				 * 当position属性设置为absolute时，表示开启绝对定位
+				 */
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+				/*
+				 * 定位
+				 * 当开启元素定位（position的值非static）时，可以通过left、right、top、bottom来设置偏移量
+				 * 这四个参数是相对于其定位位置的方向距离,通常只使用两个就可以对某元素定位（水平垂直任意一个均可）
+				 * 可选值：
+				 * static：默认值，元素没有开启定位
+				 * relative：开启元素的相对定位
+				 * 		1、开启元素的相对定位后，若不设置偏移量，则元素位置不变
+				 * 		2、相对定位是相对于元素在文档流中原来的位置定位
+				 * 		3、相对定位的元素不会脱离文档流
+				 * 		4、相对定位会使元素提升一个层级
+				 * 		5、相对元素不会改变元素的性质（块元素或内联元素）
+				 * absolute：开启元素的绝对定位
+				 * 		1、开启绝对定位，会使元素脱离文档流
+				 * 		2、开启绝对定位，若不设置偏移量，则元素位置不变
+				 * 		3、绝对定位是相对于离它最近的开启了定位的祖先元素进行定位的，均为开启则相对于浏览器窗口
+				 * 			一般情况开启了子元素的绝对定位，都会开启父元素的相对定位
+				 * 		4、绝对定位会使元素提升一个层级
+				 * 		5、绝对元素会改变元素的性质（内联元素变为块元素，块元素的内容默认被撑开）
+				 * fixed：开启元素的固定定位（固定定位也是绝对定位的一种，与绝对定位不同如下）
+				 * 		1、固定定位永远都会相对于浏览器窗口
+				 * 		2、固定定位会固定在窗口某位置，不会随着滚动条变化
+				 * 		3、IE6不支持固定定位（使用Js实现）
+				 */
+				position: relative;
+				left: 100px;
+				top: 200px;
+			}
+			.box3{
+				width: 200px;
+				height: 200px;
+				background-color: yellowgreen;
+				
+			}
+			.s1{
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				position: absolute;
+			}
+			.box4{
+				width: 100px;
+				height: 100px;
+				background-color: orange;
+				position: fixed;
+				top: 0px;
+				left: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2">
+			<div class="box4"></div>
+		</div>
+		<div class="box3"></div>
+		<span class="s1">我是一个span</span>
+	</body>
+</html>

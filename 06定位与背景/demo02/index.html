@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>层级</title>
+		<style type="text/css">
+			.box1{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				position: relative;
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+				position: absolute;
+				top: 100px;
+				left: 100px;
+				/*
+				 * 如果定位元素层级一样，则结构上下面的元素盖住上面的
+				 * 通过z-index属性可以设置元素的层级，为该属性指定正整数值，越大层级越高
+				 * 没有开启定位的元素则不能开启此属性
+				 * 父元素的层级不会高过子元素
+				 */
+				z-index: 10;
+			}
+			.box3{
+				width: 200px;
+				height: 200px;
+				background-color: yellowgreen;
+				position: relative;
+				/*top: 200px;
+				left: 200px;
+				z-index: 30;*/
+			}
+			.box4{
+				width: 200px;
+				height: 200px;
+				background-color: orange;
+				position: relative;
+				/*相对定位*/
+				top: -150px;
+				left: 150px;
+				z-index: 20;
+				/*
+				 * 设置元素的透明背景
+				 * opacity可以用来设置元素背景的透明
+				 * 需要0-1之间的数值（0表示透明，1表示不透明）
+				 * opacity属性在IE8及以下的浏览器不支持，需要用如下属性代替
+				 * filter:alpha(opacity=50) (0-100。0表示透明，1表示不透明)
+				 * filter在IE test中 IE6不支持
+				 */
+				filter:alpha(opacity=50);
+			}
+			.box5{
+				width: 100px;
+				height: 100px;
+				background-color: skyblue;
+				position: absolute;
+				/*绝对定位*/
+				/*z-index: 10;*/
+			}
+		</style>
+	</head>
+	<body style="height: 1000px;">
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4">
+			<div class="box5"></div>
+		</div>
+	</body>
+</html>
