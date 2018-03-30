@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>表格</title>
+		<style type="text/css">
+			.t1{
+				/*设置表格的宽度*/
+				width: 300px;
+				margin: 0 auto;
+				border: 1px solid black;
+				/*
+				 * table和border-spacing之间默认有一个距离
+				 * 通过border-spacing属性可以设置这个距离
+				 */
+				/*border-spacing: 0px;*/
+				/*
+				 * border-collapse可以用来合并表格之间的边框
+				 * 设置此项之后，border-spacing自动失效
+				 */
+				border-collapse: collapse;
+				/*设置背景颜色*/
+				/*background-color: #bfa;*/
+			}
+			td,th{
+				border: 1px solid black;
+			}/*设置边框*/
+			tr:nth-child(even){
+				background-color: #bfa;
+			}/*设置隔行变色*/
+			tr:hover{
+				background-color: #ffa;
+			}/*设置移入变色(IE6不支持，不支持a以外的元素绑定hover和active)*/
+		</style>
+	</head>
+	<body>
+		<!--
+			表格是用来表示一些格式化的数据，比如课程表，对账单
+			在HTML中，使用table标签来创建一个表格,table是一个块元素
+		-->
+		<table class="t1">
+			<tr><!--使用tr表示行元素-->
+				<!--可以使用th来表示表头(默认居中加粗)-->
+				<th>学号</th>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>地址</th>
+				<!--<td rowspan="2">A4</td>-->
+				<!--使用rowspan来纵向合并单元格，数字为合并单元格的个数-->
+			</tr>
+			<tr>
+				<td>1</td><!--使用td表示单元格-->
+				<td>孙悟空</td>
+				<td>男</td>
+				<td>花果山</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>猪八戒</td>
+				<td>男</td>
+				<td>高老庄</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>沙和尚</td>
+				<td>男</td>
+				<td>流沙河</td>
+				<!--<td colspan="2">D3</td>-->
+				<!--使用colspan来横向合并单元格，数字为合并单元格的个数-->
+			</tr>
+		</table>
+	</body>
+</html>

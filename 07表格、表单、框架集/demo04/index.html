@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>完善clearfix</title>
+		<style type="text/css">
+			.box1{
+				width: 300px;
+				height: 300px;
+				background-color: #bfa;
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+				margin-top: 100px;
+				/*
+				 * 子元素和父元素相邻的垂直外边距会发生重叠，子元素的外边距会传递给父元素
+				 * 使用空的table标签可以隔绝子元素和父元素的外边距，阻止外边距的重叠
+				 */
+			}
+			
+			.box3{
+				border: 10px red solid;
+			}
+			.box4{
+				width: 100px;
+				height: 100px;
+				background-color: yellowgreen;
+				float: left;
+			}
+			/*.box1:before{
+				content: "";
+				display: table;
+				 解决父子元素的外边距重叠
+				display: table;可以将一个元素设置为表格显示
+				 
+			}
+			/*.clearfix:after{
+				content: "";
+				display: table; block亦可
+				clear: both;
+				解决父元素高度塌陷
+			}*/
+			.clearfix:before,
+			.clearfix:after{
+				content: "";
+				display: table;
+				clear: both;
+				/*既可以解决高度塌陷，又可以确保父元素和子元素的垂直外边距重叠*/
+			}
+			.clearfix{
+				zoom: "1";/*兼容IE6*/
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box3 clearfix">
+			<div class="box4"></div>
+		</div>
+		<div class="box1 clearfix">
+			<!--<table></table>可以解决父子元素外边距重叠-->
+			<div class="box2"></div>
+		</div>
+		
+	</body>
+</html>

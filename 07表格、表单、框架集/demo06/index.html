@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>框架集</title>
+	</head>
+	
+		<!--
+			框架集和内联框架的作用类似，都是用于在一个页面中引入另一个web页面
+			框架集能引入多个web框架，而内联框架只能引入一个
+			用frameset建立,不能与body同屏出现,允许嵌套
+			与iframe一样，不会被搜素引擎所检索
+		-->
+		<frameset cols="30%,40%,30%"><!--rows以行排列，cols以列排列，必须选择一个且指定每一部分的大小-->
+			<frame src="1.html"/>
+			<frame src="2.html"/>
+			<frameset rows="30%,40%,30%">
+				<frame src="1.html"/>
+				<frame src="2.html"/>
+				<frame src="3.html"/>
+			</frameset>
+		</frameset>
+</html>

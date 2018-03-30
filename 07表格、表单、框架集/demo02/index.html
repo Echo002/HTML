@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>长表格</title>
+	</head>
+	<body>
+		<table>
+			<!--
+				有些情况表格是非常长的，这时需要将表格分为三个部分：表头，表格主体、表尾
+				HTML为它提供了三个标签
+				thead：表头
+				tbody：表格主体
+				tfoot：表尾
+				tr需要写在这些标签当中
+				thead、tbody、tfoot的位置与HTML中写的顺序没有关系
+				!!!tbody会自动添加，并且将所有的tr都放到tbody中，所以tr不是table的子元素
+				正确 tdody>tr 错误table>tr
+			-->
+			<thead>
+				<tr>
+					<th>日期</th>
+					<th>收入</th>
+					<th>支出</th>
+					<th>总计</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<th>10.24</th>
+					<th>500</th>
+					<th>300</th>
+					<th>200</th>
+				</tr>
+				<tr>
+					<th>10.24</th>
+					<th>500</th>
+					<th>300</th>
+					<th>200</th>
+				</tr>
+				<tr>
+					<th>10.24</th>
+					<th>500</th>
+					<th>300</th>
+					<th>200</th>
+				</tr>
+				<tr>
+					<th>10.24</th>
+					<th>500</th>
+					<th>300</th>
+					<th>200</th>
+				</tr>
+			</tbody>
+			
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+					<th>合计</th>
+					<th>100</th>
+				</tr>	
+			</tfoot>
+		</table>
+	</body>
+</html>

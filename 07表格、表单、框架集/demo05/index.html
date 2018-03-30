@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!--	
+		表单的作用是为了将用户信息提交给服务器
+		比如：百度搜索框、注册登录
+		使用form标签来创见表单
+			form标签中必须指定action标签，指向一个服务器的地址
+			当我们提交表单时，将会提交到action属性对应的地址
+			
+		-->
+		<form action="target.html">
+			<!--还需要向form中添加不同的表单项-->
+			<fieldset>
+				<legend>个人信息</legend>
+				<label for="user">用户名:</label><input type="text"  name="username" id="user"/>
+				密码:<input type="password"  name="password"/>
+				<input type="submit" value="百度一下"/>
+				<input type="reset" />
+				<input type="button" value="自定义"/><br />
+				性别：
+				<input type="radio" name="sex" value="man" checked="checked"/>男
+				<input type="radio" name="sex" value="woman"/>女<br />
+				<!--使用fieldset来对表单项分组，使用legend来设置分组名-->
+			</fieldset>
+			爱好：
+			<input type="checkbox" name="hobby" value="lanqiu"/>篮球
+			<input type="checkbox" name="hobby" value="zuqiu"/>足球
+			<input type="checkbox" name="hobby" value="yumaoqiu"/>羽毛球<br />
+			<!--
+				label标签中设置for可以和input的id进行绑定
+				type可选值
+				text：文本框
+				submit：提交按钮
+				password：密码框
+				checkbox：多选框 check属性来设置是否默认选中
+				radio：单选框 以name属性分组；以value属性确定
+				reset：重置按钮
+				bottom：单纯的按钮
+				如果希望数据项提交到服务器中，还需要指定一个name属性(表示提交内容的名字)
+				用户填写的信息会以查询字符串的形式发送给服务器
+				url地址?查询字符串 格式 属性名=属性值&属性名=属性值
+				在submit(text)中可以通过value来设置按钮名称
+			-->
+			
+			你喜欢的明星：<select name="star">
+				<optgroup label="female">
+					<option value="bb">范冰冰</option>
+					<option value="zw">赵薇</option>
+					<option value="zl">林志玲</option>
+				</optgroup>
+				<optgroup label="male">
+					<option value="ldh">刘德华</option>
+					<option value="lm">黎明</option>
+					<option value="pcj">潘长江</option>
+				</optgroup>
+				<!--name给select，value给option-->
+			</select><br />
+			<!--
+				使用select来建立下拉菜单
+				select属性来设置是否默认选中
+				multiple属性来设置多选下拉列表
+				optgroup标签来为选项分组，label标签实现
+			-->
+			
+			自我介绍：<textarea name="info"></textarea><br />
+			<!--textarea建立文本域-->
+			
+			<button type="submit">百度一下</button>
+			<button type="reset">重置</button>
+			<button type="button">自定义</button>
+			<!--自定义按钮更加灵活-->
+		</form>
+		
+	</body>
+</html>
