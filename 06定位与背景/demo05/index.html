@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>背景二</title>
+		<style type="text/css">
+			.box{
+				width: 500px;
+				height: 500px;
+				background-color: #bfa;
+				margin: 0 auto;
+				background-image: url(img/00.gif);
+				background-repeat: no-repeat;
+				background-position: 55% 30%;
+				/*
+				 * 调整背景图片在元素中的位置
+				 * 可用百分号或者是px设置两个方向的偏移量(负值则为相反的方向)
+				 * 也可以用top,right,left,bottom,center其中的两个来确定位置
+				 * 缺省值为center
+				 */				
+			}
+			body{
+				background-image: url(img/00.gif);
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				/*
+				 * 用background-attachment来设置图片是否随着页面滚动
+				 * 参数：scroll(默认，随着滚动)、fixed
+				 * 设置为fixed的时候，默认相对于浏览器窗口
+				 */	
+			}
+		</style>
+	</head>
+	<body style="height: 5000px;">
+		<div class="box"></div>
+	</body>
+</html>

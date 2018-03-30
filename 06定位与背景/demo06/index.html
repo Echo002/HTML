@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>按钮练习</title>
+		<style type="text/css">
+			.btn{
+				/*将内联元素转换为块元素*/
+				display: block;
+				/*设置宽和高*/
+				width: 93px;
+				height: 29px;
+				/*background-image: url(img/link.png);*/
+				background-image: url(img/btn.png);
+				background-repeat: no-repeat;
+			}
+			.btn:hover{
+				/*background-image: url(img/hover.png);*/
+				background-position: -93px 0px;
+			}
+			.btn:active{
+				/*background-image: url(img/active.png);*/
+				background-position: -186px 0px;
+			}
+			/*
+			 * 做完内容以后，发现在第一次切换图片时会有闪烁
+			 * 不会带来很好的用户体验，产生闪烁的原因：
+			 * 背景图片是以外部资源的形式加载网页，浏览器每加载一次外部资源就要发送一次请求
+			 * 但是我们的外部资源并不是同时加载，只是在被使用时加载，此示例一开始只加载609.ico，
+			 * 由于加载图片需要一定的时间，导致闪烁
+			 * 
+			 * 解决：可以将三个图片整合为一张图片，这样可以同时加载，通过background-position切换显示的位置
+			 * (CSS-sprite)
+			 * 优点：减少加载次数，改善用户体验、减小图片的总大小
+			 */
+		</style>
+	</head>
+	<body>
+		<!--创建一个超链接-->
+		<a class="btn" href="#"></a>
+	</body>
+</html>
